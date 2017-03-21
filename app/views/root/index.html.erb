@@ -1,0 +1,28 @@
+<br>
+<div class="Title">
+  <h1>Blocmetric: get analytic services on your need!</h1>
+</div>
+ <div class="jumbotron">
+   <p>Register applications that you need analytics on!</p>
+   <p>
+     <% if user_signed_in? %>
+        <p>Do you want to sign out?</p>
+        <%= link_to "Sign Out", destroy_user_session_path, method: :delete, class: 'btn btn-primary' %>
+     <% else %>
+        <p>Haven't Signed up with Blocmetric?</p>
+        <%= link_to "Sign Up", new_user_registration_path, class: 'btn btn-info' %>
+        <p>Do you already have an account with us? then</p>
+        <%= link_to "Sign In", new_user_session_path, :class => 'btn btn-info'  %>
+     <% end %>
+   </p>
+ </div>
+ <div class="row">
+   <div class="col-md-6">
+     <h2>Provide graph and data that you need!</h2>
+     <p>Free Plan</p>
+   </div>
+   <div class="col-md-6">
+     <h2>Provide multiple events for registered application!</h2>
+     <p>Premium Plan</p>
+   </div>
+ </div>

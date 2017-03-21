@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Blocmetric</title>
+    <%= csrf_meta_tags %>
+    <p class="notice"><%= notice %></p>
+    <p class="alert"><%= alert %></p>
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+  <body>
+    <div class="container">
+      <ul class="nav nav-tabs">
+         <li><%= link_to "Main Page", root_path %></li>
+         <li><%= link_to "Register an Application", root_path %></li>
+         <li><%= link_to "Applications", root_path %></li>
+         <% if current_user && current_user.role == "developer" %>
+            <li><%= link_to "Receive Incoming Events", receive_incoming_events_path %></li>
+         <% end %>
+       </ul>
+      <div class="row">
+      <div class="pull-right user-info">
+        <% if user_signed_in? %>
+          Signed in as: <strong><%= current_user.email %></strong> |
+          <%= link_to 'Edit profile', edit_user_registration_path, :class => 'navbar-link' %> - <%= link_to "Sign Out", destroy_user_session_path, method: :delete, :class => 'navbar-link'  %>
+        <% else %>
+          <%= link_to "Sign Up", new_user_registration_path, :class => 'navbar-link'  %> -
+          <%= link_to "Sign In", new_user_session_path, :class => 'navbar-link'  %>
+        <% end %>
+      </div>
+      <%= yield %>
+    </div>
+  </div>
+  </body>
+</html>
