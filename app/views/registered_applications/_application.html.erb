@@ -1,0 +1,12 @@
+<div class="media">
+  <div class="media-body">
+    <h4 class="media-heading">
+      <%= link_to registered_application.name, registered_application_path(id: registered_application.id) %>
+    </h4>
+    <small>
+      <%= registered_application.url %>
+      Number of Events:
+      <%= registered_application.events.count %>
+    </small>
+  </div>
+</div>

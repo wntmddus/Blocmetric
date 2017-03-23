@@ -5,6 +5,8 @@ class User < ApplicationRecord
   after_initialize :set_default_role, :if => :new_record?
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
+
+  has_many :registered_applications
   def set_default_role
    self.role ||= :standard
   end

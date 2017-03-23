@@ -1,5 +1,11 @@
 Rails.application.routes.draw do
+  get 'events/show'
+
   devise_for :users
+
+  resources :registered_applications do
+    resources :events
+  end
   get 'users/index'
 
   get 'users/show'
