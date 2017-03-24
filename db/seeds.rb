@@ -45,6 +45,11 @@ applications = RegisteredApplication.all
     name: Faker::University.name
   )
 end
+applciation = RegisteredApplication.create!(
+  user: users.sample,
+  name: "Hello",
+  url: "http://registered_application.com"
+)
 
 
 puts "#{RegisteredApplication.count} Applications created"
