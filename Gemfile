@@ -22,6 +22,9 @@ gem 'coffee-rails', '~> 4.2'
 # gem 'therubyracer', platforms: :ruby
 gem 'faker'
 gem 'bootstrap-sass'
+gem 'chartkick'
+gem 'groupdate'
+
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
 # Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks
@@ -42,7 +45,6 @@ group :development, :test do
   gem 'pry-rails'
 end
 group :production do
-  gem 'pg'
   gem 'rails_12factor'
 end
 
@@ -54,6 +56,7 @@ group :development do
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
   gem 'sqlite3'
+
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem

@@ -6,7 +6,7 @@
     <small>
       <%= registered_application.url %>
       Number of Events:
-      <%= registered_application.events.count %>
+      <%= pie_chart registered_application.events.group(:name).count %>
     </small>
   </div>
 </div>

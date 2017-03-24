@@ -1,4 +1,8 @@
+<%= javascript_include_tag "//www.google.com/jsapi", "chartkick" %>
 <h1>All Events</h1>
+<p>Number of Events</p>
+<%= pie_chart @registered_application.events.group(:name).count %>
+<%= line_chart @registered_application.events.group_by_day(:created_at).count %>
 <div class="row">
   <div class="col-md-8">
     <%= render partial: 'events/event', collection: @events %>
