@@ -31,7 +31,7 @@ gem 'jquery-rails'
 gem 'turbolinks', '~> 5'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.5'
-gem 'sqlite3'
+#gem 'sqlite3'
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 3.0'
 # Use ActiveModel has_secure_password
@@ -46,6 +46,7 @@ group :development, :test do
   gem 'pry-rails'
 end
 group :production do
+  gem 'pg'
   gem 'rails_12factor'
 end
 
@@ -56,7 +57,7 @@ group :development do
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
-  #gem 'sqlite3'
+  gem 'sqlite3'
 
 end
 
