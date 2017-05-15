@@ -1,24 +1,12 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
 
-Things you may want to cover:
 
-* Ruby version
 
-* System dependencies
+Simple website that
+provides metric data for registered web applications
 
-* Configuration
+Designed website that keeps track of events happening on web applications that are
+registered.
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Implemented visual aids for events with charts and line graph with Chartkick gem 
